@@ -1,29 +1,36 @@
-import { useState } from 'react';
+const form = document.getElementById('form');
+const submitBtn = form.querySelector('button[type="submit"]');
 
-export default function ContactForm() {
-  const [result, setResult] = useState("");
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
+    const formData = new FormData(form);
     formData.append("access_key", "2070bba2-e914-4cf5-acdd-ba3fb3d398bf");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
+    const originalText = submitBtn.textContent;
 
-    const data = await response.json();
-    setResult(data.success ? "Success!" : "Error");
-  };
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
 
-  return (
-    <form onSubmit={onSubmit}>
-      <input type="text" name="name" required/>
-      <input type="email" name="email" required/>
-      <textarea name="message" required></textarea>
-      <button type="submit">Submit</button>
-      <p>{result}</p>
-    </form>
-  );
-}
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert("Success! Your message has been sent.");
+            form.reset();
+        } else {
+            alert("Error: " + data.message);
+        }
+
+    } catch (error) {
+        alert("Something went wrong. Please try again.");
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
+});
