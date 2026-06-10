@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    align-items: center;
+    flex-direction: column;
+    background-color: #7a4202;
+    color: #fff;
+}
+
+/* Navigation Bar CSS */
+
+header {
+    background-color: rgba(59, 34, 1, 0.843);
+    color: #fce6c3;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.logo {
+    color: rgb(255, 171, 92);
+}
+
+nav {
+    width: 100vw;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+nav ul li {
+    background: transparent;
+    list-style: none;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+
+nav ul li a,
+.phoneNumberNav {
+    text-decoration: none;
+    cursor: pointer;
+    color: #fce6c3b9;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+
+nav ul li a:hover,
+.phoneNumberNav:hover {
+    color: #f5ead7;
+    text-shadow: 0.3px 0.3px #f5ead7;
+}
+
+/* Main CSS */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heroSect {
+    width: 100%;
+    height: 80vh;
+    padding: 1rem;
+    gap: 0.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(/frontend.kode/download\ \(10\).jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.introduction {
+    margin-bottom: 0.5rem;
+}
+
+.name {
+    color: #ff9d00;
+}
+
+/* About Me CSS */
+
+.aboutMeSect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: auto;
+    padding: 3rem;
+    background: radial-gradient(circle at right bottom, #3c2801, #000);;
+}
+
+.aboutMeContainer {
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.profilePic {
+    width: 15rem;
+}
+
+.aboutMeTextDiv {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    text-align: left;
+}
+
+.introAboutMe {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.roleAboutMe {
+    color: #d79c05;
+}
+
+.paragraphAboutMe {
+    font-size: 16px;
+}
+
+.infoAboutMe {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.downloadResumeBtn {
+    width: 10rem;
+    height: 2rem;
+    background-color: #ab6305;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+
+.downloadResumeBtn:hover {
+    box-shadow: 1px 1px 10px rgb(255, 171, 92);
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+}
+
+/* Services Section CSS */
+
+.servicesSect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    text-align: center;
+    border-top: 3px solid #ffbe4f3f;
+    background: radial-gradient(circle at top right, #3c2801, #000);
+}
+
+.servicesGridBoxes {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.boxes {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgba(87, 51, 4, 0.406);
+}
+
+.servicesBoxHeading {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* Contact Me CSS */
+
+.contactMe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.contactHeading {
+    margin-bottom: .5rem;
+}
+
+.contactOption {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sendingFeedback {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContact {
+    background: transparent;
+    border: 1px solid black;
+    padding: .5rem 1rem;
+    margin: 0.1rem;
+    outline: none;
+    color: #fff;
+}
+
+.inputContact::placeholder {
+    color: #ffffffb7;
+}
+
+#yourName,
+#email {
+    width: 15rem;
+}
+
+#yourThoughts {
+    width: 15rem;
+    height: 7rem;
+}
+
+.sendFeedbackBtn {
+    height: 2rem;
+    width: auto;
+    margin-top: .5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 1px solid rgb(88, 56, 2);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+
+.sendFeedbackBtn:hover {
+    box-shadow: 1px 1px 10px rgba(59, 34, 1, 0.843);
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+}
+
+.socialMediaPlatformsLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+/* Media Queries CSS */
+
+@media screen and (min-width: 1000px) {
+    .aboutMeContainer {
+        display: flex;
+        gap: 4rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .phoneNumberNav {
+        position: absolute;
+        right: 2rem;
+    }
+    nav ul li {
+        display: none;
+    }
+    .servicesGridBoxes {
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .phoneNumberNav {
+        position: absolute;
+        right: 2rem;
+    }
+}
