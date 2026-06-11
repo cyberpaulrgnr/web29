@@ -19,20 +19,6 @@ body {
     width: auto;
 }
 
-/* @keyframes backgroundBlast {
-    0% {font-size: 1rem;}
-    10% {font-size: 2rem;}
-    20% {font-size: 3rem;}
-    30% {font-size: 4rem;}
-    40% {font-size: 5rem;}
-    50% {font-size: 6rem;}
-    60% {font-size: 5rem;}
-    70% {font-size: 4rem;}
-    80% {font-size: 3rem;}
-    90% {font-size: 2rem;}
-    100% {font-size: 1rem;}
-} */
-
 /* Navigation Bar CSS */
 
 header {
