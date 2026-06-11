@@ -125,7 +125,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url(download-image.jpg);
+    background-image: url(background-image.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
