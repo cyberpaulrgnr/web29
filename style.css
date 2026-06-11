@@ -7,6 +7,7 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 body {
@@ -15,7 +16,22 @@ body {
     flex-direction: column;
     background-color: #7a4202;
     color: #fff;
+    width: auto;
 }
+
+/* @keyframes backgroundBlast {
+    0% {font-size: 1rem;}
+    10% {font-size: 2rem;}
+    20% {font-size: 3rem;}
+    30% {font-size: 4rem;}
+    40% {font-size: 5rem;}
+    50% {font-size: 6rem;}
+    60% {font-size: 5rem;}
+    70% {font-size: 4rem;}
+    80% {font-size: 3rem;}
+    90% {font-size: 2rem;}
+    100% {font-size: 1rem;}
+} */
 
 /* Navigation Bar CSS */
 
@@ -29,6 +45,7 @@ header {
 
 .logo {
     color: rgb(255, 171, 92);
+    cursor: default;
 }
 
 nav {
@@ -75,6 +92,32 @@ nav ul li a:hover,
     text-shadow: 0.3px 0.3px #f5ead7;
 }
 
+/* Bottom Navigation CSS */
+
+.bottomNav {
+    height: 5rem;
+    width: auto;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: rgba(75, 38, 0);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+}
+
+.bottomNav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.bottomNav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
 /* Main CSS */
 
 main {
@@ -83,6 +126,8 @@ main {
     justify-content: center;
     flex-direction: column;
 }
+
+/* Hero Section */
 
 .heroSect {
     width: 100%;
@@ -94,7 +139,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url(web29/blob/main/background-image.jpg);
+    background-image: url(download-image.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -116,8 +161,8 @@ main {
     justify-content: center;
     flex-direction: column;
     gap: 1.5rem;
-    height: auto;
-    padding: 3rem;
+    height: 90vh;
+    padding: 4rem 2rem 2rem 2rem;
     background: radial-gradient(circle at right bottom, #3c2801, #000);;
 }
 
@@ -193,7 +238,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2rem;
+    padding: 4rem 2rem 2rem 2rem;
     gap: 1.5rem;
     text-align: center;
     border-top: 3px solid #ffbe4f3f;
@@ -214,12 +259,112 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 1rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #000;
     background-color: rgba(87, 51, 4, 0.406);
+    transition: .3s ease;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+}
+
+.boxes:hover {
+    box-shadow: 1px 1px 20px rgba(145, 84, 4, 0.406);
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
 }
 
 .servicesBoxHeading {
     font-weight: 700;
     font-size: 16px;
+}
+
+/* My Skills CSS */
+
+.mySkills {
+    padding: 4rem 2rem 2rem 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background: radial-gradient(circle at bottom,  #4c3303, #2b1500);
+    width: 100%;
+    height: 95vh;
+    gap: 1rem;
+}
+
+.skillsContainer {
+    width: auto;
+    height: 30rem;
+    margin-top: 2rem;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.skills {
+    width: auto;
+    background-color: rgba(128, 73, 0, 0.195);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1rem;
+    gap: .5rem;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px #000;
+    border-radius: 15px;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.skills:hover {
+    box-shadow: 1px 1px 20px rgba(46, 27, 2, 0.406);
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+}
+
+.skillNameAndPercentage {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skillName {
+    font-weight: 700;
+}
+
+.percentage {
+    font-size: .7rem;
+}
+
+.bar {
+    background: linear-gradient(to right, blue 7rem, black 3rem);
+    width: 10rem;
+    height: .2rem;
 }
 
 /* Contact Me CSS */
@@ -259,16 +404,16 @@ main {
 }
 
 .inputContact::placeholder {
-    color: #ffffffb7;
+    color: #ffffff59;
 }
 
 #yourName,
 #email {
-    width: 15rem;
+    width: 20rem;
 }
 
 #yourThoughts {
-    width: 15rem;
+    width: 20rem;
     height: 7rem;
 }
 
@@ -310,6 +455,9 @@ main {
 /* Media Queries CSS */
 
 @media screen and (min-width: 1000px) {
+    .bottomNav {
+        display: none;
+    }
     .aboutMeContainer {
         display: flex;
         gap: 4rem;
@@ -324,11 +472,29 @@ main {
     nav ul li {
         display: none;
     }
+    .servicesSect {
+        height: 100vh;
+    }
     .servicesGridBoxes {
         display: grid;
         max-width: 100%;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
+    }
+    .mySkills {
+        height: 40rem;
+    }
+    .skillsContainer {
+        width: auto;
+        height: 20rem;
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .bottomNav {
+        display: flex;
     }
 }
 
