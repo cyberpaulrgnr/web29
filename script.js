@@ -1,3 +1,16 @@
+//Download Btn
+
+document.getElementById("downloadBtn").addEventListener("click", () => {
+    const link = document.createElement('a');
+    link.href = "/Portfolio/resume.docx";
+    link.download = "resume.docx";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+
+
+
 const form = document.getElementById('form');
 const submitBtn = form.querySelector('button[type="submit"]');
 
@@ -34,3 +47,17 @@ form.addEventListener('submit', async (e) => {
         submitBtn.disabled = false;
     }
 });
+
+
+function facebookLink() {
+    window.open("https://www.facebook.com/paulrgnr");
+}
+function intagramLink() {
+    window.open("https://www.instagram.com/cyberpaulrgnr");
+}
+function tiktokLink() {
+    window.open("https://www.tiktok.com/cyberpaulrgnr");
+}
+function linkedInLink() {
+    window.open("https://www.linkedin.com/PaulReignierBediones");
+}
