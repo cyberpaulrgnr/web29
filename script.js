@@ -2,7 +2,7 @@
 
 document.getElementById("downloadBtn").addEventListener("click", () => {
     const link = document.createElement('a');
-    link.href = "/Portfolio/resume.docx";
+    link.href = "resume.docx";
     link.download = "resume.docx";
     document.body.appendChild(link);
     link.click();
