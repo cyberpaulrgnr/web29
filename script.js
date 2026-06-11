@@ -2,8 +2,8 @@
 
 document.getElementById("downloadBtn").addEventListener("click", () => {
     const link = document.createElement('a');
-    link.href = "https://cyberpaulrgnr.github.io/web29/resume.docx";
-    link.download = "resume.docx";
+    link.href = "https://cyberpaulrgnr.github.io/web29/resume.pdf";
+    link.download = "resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
